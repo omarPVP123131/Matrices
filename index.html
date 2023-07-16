@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Matriz</title>
+</head>
+<body>
+    <h1>Generador de tablas con números aleatorios</h1>
+    <h2>pon lo que se te antoje</h2>
+    <label for="filas">Número de filas:</label>
+    <input type="number" id="filas" min="1" oninput="validarNumero(event)">
+    <br>
+    <label for="columnas">Número de columnas:</label>
+    <input type="number" id="columnas" min="1"oninput="validarNumero(event)">
+    <br>
+    <button onclick="crearMatriz()">Crear Matriz</button>
+    <br>
+    <div class="container">
+        <table id="matriz"></table>
+    </div>
+    <div class="pagination">
+        <button id="btnAnterior" onclick="cambiarPagina(paginaActual - 1)" disabled>Anterior</button>
+        <span id="paginaActual">Página 1</span>
+        <button id="btnSiguiente" onclick="cambiarPagina(paginaActual + 1)" disabled>Siguiente</button>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
